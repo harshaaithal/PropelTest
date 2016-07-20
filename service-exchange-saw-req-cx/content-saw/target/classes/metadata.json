@@ -1,0 +1,10 @@
+{
+  "features" : [ "case-exchange" ],
+  "adapter" : "SAW",
+  "name" : "SAW Case Exchange",
+  "description" : "",
+  "files" : [ ],
+  "id" : "saw-case-exchange",
+  "uploadTime" : "2016-04-28T05:42:59-0600",
+  "version" : "2.01-rc.1"
+}

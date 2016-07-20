@@ -1,0 +1,2 @@
+<#assign UA_SAW_CUSTOM_FIELDS = "AssignedGroup.Name,ServiceDeskGroup.Name,Category.DisplayLabel,RequestedByPerson.Email,Comments,AssignedPerson.Email,CloseTime,Priority,DisplayLabel,Status,RegisteredForActualService.DisplayLabel,AssignedGroup.Name,ExpertGroup.Name,CaseExchangeEnabled,ExternalProcessReference,ClosedByPerson.Name,ClosedByPerson.Email,CompletionCode,Escalated,ExpectedResolutionTime,OwnedByPerson.Email,RegisteredForLocation.DisplayLabel,SolvedTime,PhaseId,Category.Level1Parent,Category.DisplayLabel,ExpertAssignee,ExpertAssignee.Email,ProcessId
+"/>

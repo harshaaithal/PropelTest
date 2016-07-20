@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.hp.propel.serviceExchange</groupId>
+	<artifactId>service-exchange-saw-req-cx</artifactId>
+	<version>2.20-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>com.hp.propel.serviceExchange</groupId>
+		<artifactId>service-exchange-content-super-pom</artifactId>
+		<version>2.20-SNAPSHOT</version>
+	</parent>
+
+	<name>Service Exchange Example Content - SAW</name>
+
+	<modules>
+		<module>content-saw</module>
+		<!-- <module>content-saw-ticketing</module> <module>oo-saw-cp</module> -->
+
+
+
+
+
+		<module>sx-adapter-saw</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.hp.ccue.serviceExchange</groupId>
+				<artifactId>sx-maven-plugin</artifactId>
+				<configuration>
+					<idmUrl>https://</idmUrl>
+					<idmTransportUser>idmTransportUser</idmTransportUser>
+					<idmTransportPassword>idmTransportUser</idmTransportPassword>
+					<sxUrl>http://</sxUrl>
+					<username>admin</username>
+					<password>cloud</password>
+					<tenant>Provider</tenant>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<id>package</id>
+			<modules>
+				<module>bin</module>
+			</modules>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>copy-dependencies</id>
+								<phase>package</phase>
+								<goals>
+									<goal>copy-dependencies</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${project.parent.build.directory}/dependencies</outputDirectory>
+									<includeScope>runtime</includeScope>
+									<excludeScope>provided</excludeScope>
+									<excludeGroupIds>com.hp</excludeGroupIds>
+								</configuration>
+							</execution>
+							<execution>
+								<id>copy-dependencies-source</id>
+								<phase>package</phase>
+								<goals>
+									<!-- use copy-dependencies instead if you don't want to explode 
+										the sources -->
+									<goal>copy-dependencies</goal>
+								</goals>
+								<configuration>
+									<classifier>sources</classifier>
+									<failOnMissingClassifierArtifact>false</failOnMissingClassifierArtifact>
+									<outputDirectory>${project.parent.build.directory}/dependencies</outputDirectory>
+									<includeScope>runtime</includeScope>
+									<excludeScope>provided</excludeScope>
+									<excludeGroupIds>com.hp</excludeGroupIds>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<scm>
+		<connection>scm:git:ssh://git@ftct0033g.hpeswlab.net:7999/sx/sx-content.git</connection>
+		<developerConnection>scm:git:ssh://git@ftct0033g.hpeswlab.net:7999/sx/sx-content.git
+        </developerConnection>
+		<url>http://ftct0033g.hpeswlab.net:7990/projects/SX/repos/sx-content</url>
+		<tag>HEAD</tag>
+	</scm>
+</project>

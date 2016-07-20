@@ -1,0 +1,149 @@
+{
+    "entityType": {
+        "Incident": "Incident",
+		"Request":"Request"
+    },
+	
+"Default" : {
+
+"RequestedByPersonId" : "12924",
+"RequestedForPersonId" : "12924",
+"AssignmentGroup" : "Request Item Place Holder",
+"AssigneeId" : "12924",
+"AssignedToEmail":"sawdefaultuser@gmail.com",
+"CIName" : "Buy Ready",
+"CIId" : "62622",
+"CategoryId":"64262",
+"BusinessJustification" : "N/A",
+"Description" : "No Description",
+"Service":"62619",
+"CompletionCode" : "CompletionCodeSolvedBySocial",
+"Solution" : "Solved by case exchange",
+"IMAssignedPersonEmail" : "sawdefaultuser@gmail.com",
+"IMClosedByPersonEmail" : "sawdefaultuser@gmail.com",
+"IMAssignmentGroupName" : "HPE GSD CX Default",
+"IMAssignmentGroupId"   : "95980",
+"IMRequestedByPersonEmail" : "sawdefaultuser@gmail.com"
+
+},
+     "Incident": {
+        "Status": {
+            // todo: review status mappings
+            "Open": "Ready",
+            "WorkInProgress": "InProgress",
+            "PendingChange": "Pending",
+            "PendingOther": "Suspended",
+            "Complete": "Complete"
+        },
+        "Urgency": {
+            "U4": "NoDisruption",
+            "U3": "SlightDisruption",
+            "U2": "SevereDisruption",
+            "U1": "TotalLossOfService"
+        },
+        "Impact": {
+            "I1": "Enterprise",
+            "I2": "SiteOrDepartment",
+            "I3": "MultipleUsers",
+            "I4": "SingleUser"
+        },
+        "CompletionCodeFromCanonical": {
+            "SuccessfulDiagnosis": "SuccessfulDiagnosis",
+            "NoFaultFound": "NoFaultFound",
+            "NoUserResponse": "NoUserResponse",
+            "NotReproducible": "NotReproducible",
+            "OutOfScope": "OutofScope",
+            "RequestRejected": "RequestRejected",
+            "ResolvedByFix": "Resolvedbyfix",
+            "ResolvedWorkaround": "ResolvedWorkaround",
+            "UnableToSolve": "UnabletoSolve",
+            "WithdrawnByUser": "WithdrawnbyUser",
+			"ClosedByRequester": "ClosedByRequester_c",
+            "SolvedByUserInstruction":"Resolvedbyfix",
+            "AutomaticallyClosed":"WithdrawnbyUser",
+			"EEMCreateEditUserAccount" : "EEMCreateEditUserAccount_c",
+			"EEMInvoiceIssue" : "EEMInvoiceIssue_c",
+			"EEMExpenseOffsetInquiry" : "EEMExpenseOffsetInquiry_c",
+			"EEMLPNInquiry" : "EEMLPNInquiry_c",
+			"EEMPOShipmentInquiry" : "EEMPOShipmentInquiry_c",
+			"EEMOperationalIssue" : "EEMOperationalIssue_c",
+			"EEMReportRequests" : "EEMReportRequests_c",
+			"EEMSpeedPerformance" : "EEMSpeedPerformance_c",
+			"DuplicateTicket" : "DuplicateTicket_c"
+        },
+        "CompletionCodeToCanonical": {
+             "SuccessfulDiagnosis":"SuccessfulDiagnosis",
+             "NoFaultFound":"NoFaultFound",
+             "NoUserResponse":"NoUserResponse",
+             "NotReproducible":"NotReproducible",
+             "OutofScope":"OutOfScope",
+             "RequestRejected":"RequestRejected",
+             "Resolvedbyfix":"ResolvedByFix",
+             "ResolvedWorkaround":"ResolvedWorkaround",
+             "UnabletoSolve":"UnableToSolve",
+             "WithdrawnbyUser":"WithdrawnByUser",
+			 "ClosedByRequester_c":"ClosedByRequester",
+			 "EEMCreateEditUserAccount_c" : "EEMCreateEditUserAccount",
+			 "EEMInvoiceIssue_c" : "EEMInvoiceIssue",
+			 "EEMExpenseOffsetInquiry_c" : "EEMExpenseOffsetInquiry",
+			 "EEMLPNInquiry_c" : "EEMLPNInquiry",
+			 "EEMPOShipmentInquiry_c" : "EEMPOShipmentInquiry",
+			 "EEMOperationalIssue_c" : "EEMOperationalIssue",
+			 "EEMReportRequests_c" : "EEMReportRequests",
+			 "EEMSpeedPerformance_c" : "EEMSpeedPerformance",
+			 "DuplicateTicket_c" : "DuplicateTicket"
+        }
+
+    },
+	"Request": {
+        "Status": {
+            // todo: review status mappings
+            "Open": "RequestStatusReady",
+            "WorkInProgress": "RequestStatusInProgress",
+            "Pending": "RequestStatusPending",
+            "Suspended": "RequestStatusSuspended",
+            "Complete": "RequestStatusComplete"
+        },
+        "Urgency": {
+            "U4": "NoDisruption",
+            "U3": "SlightDisruption",
+            "U2": "SevereDisruption",
+            "U1": "TotalLossOfService"
+        },
+        "Impact": {
+            "I1": "Enterprise",
+            "I2": "SiteOrDepartment",
+            "I3": "MultipleUsers",
+            "I4": "SingleUser"
+        },
+        "CompletionCodeFromCanonical": {
+            "SuccessfulDiagnosis": "CompletionCodeFulfilled",
+            "NoFaultFound": "CompletionCodeAbandonedByUser",
+            "NoUserResponse": "CompletionCodeSolvedBySocial",
+            "NotReproducible": "NotReproducible",
+            "OutOfScope": "CompletionCodeInvalidRequest",
+            "RequestRejected": "CompletionCodeRequestDenied",
+            "ResolvedByFix": "CompletionCodeResolvedWithWorkaround",
+            "ResolvedWorkaround": "CompletionCodeIncidentResolved",
+            "UnableToSolve": "CompletionCodeUnableToReproduce",
+            "WithdrawnByUser": "CompletionCodeAbandonedByUser",
+            "SolvedByUserInstruction":"",
+            "AutomaticallyClosed":""
+        },
+
+
+        "CompletionCodeToCanonical": {
+			 "CompletionCodeFulfilled":"SuccessfulDiagnosis",
+			 "CompletionCodeAbandonedByUser":"NoFaultFound",
+			 "CompletionCodeSolvedBySocial":"NoUserResponse",
+             "NotReproducible":"NotReproducible",
+			 "CompletionCodeInvalidRequest":"OutofScope",
+			 "CompletionCodeRequestDenied":"RequestRejected",
+			 "CompletionCodeResolvedWithWorkaround":"Resolvedbyfix",
+             "CompletionCodeIncidentResolved":"ResolvedWorkaround",
+             "CompletionCodeUnableToReproduce":"UnabletoSolve",
+             "WithdrawnbyUser":"WithdrawnByUser"
+        }
+
+    }
+}
